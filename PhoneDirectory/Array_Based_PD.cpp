@@ -120,7 +120,18 @@ string Phone_Directory::remove_entry(const string& name) // Exercise 1.7: please
 	// for (int i = index; i < size - 1; i++)
 		// the_directory[i] = the_directory[i + 1];
 
-	return "";
+	int index = find(name);
+	if (index > 0) {
+		remove_entry(index);
+		for (int i = index; i < size - 1; i++) {
+			the_directory[i] = the_directory[i + 1];
+		}
+		std::string number = this->
+		return number;
+	}
+	else {
+		return "";
+	}
 }
 
 // Private method implementation
